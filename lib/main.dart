@@ -244,7 +244,7 @@ class _StoreHomeState extends State<StoreHome> {
           RadioListTile<String>(contentPadding: EdgeInsets.zero, title: const Text('PhonePe / UPI QR'), value: 'PhonePe QR', groupValue: paymentMethod, onChanged: (v) => setState(() { paymentMethod = v!; setSheet(() {}); })),
           RadioListTile<String>(contentPadding: EdgeInsets.zero, title: Text(tr('Cash on Delivery', 'സാധനം ലഭിക്കുമ്പോൾ പണം നൽകുക')), value: 'Cash on Delivery', groupValue: paymentMethod, onChanged: (v) => setState(() { paymentMethod = v!; setSheet(() {}); })),
           if (paymentMethod == 'PhonePe QR') ...[
-            Center(child: Image.asset('assets/phonepe_qr.jpg', height: 190, fit: BoxFit.contain)),
+            Center(child: Image.asset('phonepe_qr.jpg', height: 190, fit: BoxFit.contain)),
             const Center(child: Text('UPI ID: Q667834682@ybl', style: TextStyle(fontWeight: FontWeight.bold))),
             Center(child: TextButton.icon(onPressed: () { Clipboard.setData(const ClipboardData(text: 'Q667834682@ybl')); ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('UPI ID copied'))); }, icon: const Icon(Icons.copy), label: const Text('Copy UPI ID'))),
             const Text('Pay the confirmed amount and send the payment screenshot in WhatsApp. The store will verify payment manually.', style: TextStyle(fontSize: 12, color: Colors.black54)),
